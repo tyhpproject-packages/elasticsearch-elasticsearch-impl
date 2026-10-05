@@ -1,0 +1,53 @@
+{
+    "name": "tyhpdef/elasticsearch-elasticsearch-impl",
+    "description": "Implementation package for tyhpdef/elasticsearch-elasticsearch. Require tyhpdef/elasticsearch-elasticsearch, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "9.5.0.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/elastic-transport": "@dev",
+                "tyhpdef/psr-log": "@dev",
+                "tyhpdef/psr-http-message": "@dev",
+                "tyhpdef/psr-http-client": "@dev",
+                "tyhpdef/php-http-promise": "@dev",
+                "tyhpdef/php-http-httplug": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/elasticsearch-elasticsearch"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "elasticsearch/elasticsearch": "9.5.0"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/elastic-transport": "@dev",
+        "tyhpdef/psr-log": "@dev",
+        "tyhpdef/psr-http-message": "@dev",
+        "tyhpdef/psr-http-client": "@dev",
+        "tyhpdef/php-http-promise": "@dev",
+        "tyhpdef/php-http-httplug": "@dev"
+    }
+}
